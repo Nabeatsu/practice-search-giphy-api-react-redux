@@ -1,4 +1,5 @@
 import React from "react";
+import getUrls from "../actions/getUrls";
 
 class Search extends React.Component {
   constructor(props) {
@@ -24,10 +25,10 @@ class Search extends React.Component {
   };
 
   handleSubmit = event => {
+    const { getUrls } = this.props;
     event.preventDefault();
     // 受け取ったメソッドを実行し、app の state を変更している
-    this.props.search(this.state.title);
-    this.setState({ title: "" });
+    getUrls(this.state.title);
   };
 }
 export default Search;
