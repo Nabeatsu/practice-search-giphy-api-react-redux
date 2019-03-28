@@ -3,7 +3,6 @@ const ImageList = ({ urlList }) => {
   const list = urlList.map(url => {
     return (
       <li key={url}>
-        {url}
         <img src={url} alt="" />
       </li>
     );
