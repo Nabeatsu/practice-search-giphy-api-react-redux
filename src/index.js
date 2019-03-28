@@ -22,7 +22,5 @@ render(
   document.getElementById("root")
 );
 
-import giphyAPI from "./APIs/giphyAPI";
-giphyAPI("cat").then(res => {
-  console.log(res.data);
-});
+import getUrls from "./actions/getUrls";
+store.dispatch(getUrls("cat"));
